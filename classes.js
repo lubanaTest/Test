@@ -16,10 +16,7 @@ class Node
 // ----------------------------------
 // class Graph
 // ----------------------------------
-class Graph
-{
-	
-	constructor(){
+function Graph(){
 		this.count = 0;
 		this.connections = [];
 	}
