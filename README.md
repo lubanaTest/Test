@@ -7,7 +7,10 @@
 <script>
   
   function validateForm() {
-  alert("ok");    
+  var x = document.forms["myForm"]["from"].value;
+  var y = document.forms["myForm"]["to"].value;
+  var t = document.forms["myForm"]["time"].value;
+  
    } 
 </script>
 
