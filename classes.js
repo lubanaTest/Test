@@ -24,7 +24,7 @@ function Graph(){
 	Graph.prototype.addConnection = function(node) {
 		this.connection[node.from].push(node);
 		this.count++;
-	}
+	};
 
 	Graph.prototype.print = function() {
 		var data = "Graph";
@@ -32,7 +32,7 @@ function Graph(){
 			data = data + "  " + this.connection[i].from;
 		}
 		alert(data);
-	}
+	};
 	
 }
 // ----------------------------------
