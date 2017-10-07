@@ -10,7 +10,7 @@
   function validateForm() {
   
      
-     var csv = document.forms["myForm"]["csv"].value;
+     //var csv = document.forms["myForm"]["csv"].value;
      // read CSV file content and save it to Graph
 -    
 +   // var graph = readCSV(); 
