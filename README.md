@@ -7,9 +7,18 @@
 <script>
   
   function validateForm() {
+  
+  var csv = document.forms["myForm"]["csv"].value;
+  
   var x = document.forms["myForm"]["from"].value;
   var y = document.forms["myForm"]["to"].value;
   var t = document.forms["myForm"]["time"].value;
+  
+  var graph = new Graph();
+  graph = readCSV(); 
+  graph.print();
+  
+
   
    } 
 </script>
