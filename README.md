@@ -4,9 +4,6 @@
    <script type="text/javascript" src="graph.js"></script>
 <script type="text/javascript" src="findPath.js"></script>
 
-# Test
-Developer Test
-
 <script>
   
   function validateForm() {
@@ -22,7 +19,7 @@ Developer Test
      // read CSV file content and save it to Graph
 -    
 +    var graph = readCSV(); 
-graph.print();
+ //graph.print();
    
    // Get entered data
    var x = document.forms["myForm"]["from"].value;
@@ -30,7 +27,7 @@ graph.print();
    var t = document.forms["myForm"]["time"].value;
    
 -  
-+  findPath(graph,x,y,t);
++  //findPath(graph,x,y,t);
    
       
    } 
@@ -38,7 +35,10 @@ graph.print();
 
  <body ng-app=""> 
  
- 
+ # Test
+Developer Test
+
+
  <h3>Enter the following information please:</h3>
  
  <form name="myForm">
