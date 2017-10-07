@@ -18,7 +18,7 @@
   graph = readCSV(); 
   graph.print();
   
-
+  findPath(graph,x,y,t);
   
    } 
 </script>
