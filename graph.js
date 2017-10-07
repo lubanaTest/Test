@@ -29,8 +29,9 @@ function readCSV()
 			var t = devices[2];
 			
 			if (x!=""){
-				var node = new Node(x,y,t);
-				graph.addConnection(node);
+				//var node = new Node(x,y,t);
+				//graph.addConnection(node);
+				alert(x);
 			}
 			
 			
