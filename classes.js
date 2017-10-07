@@ -24,12 +24,12 @@ class Graph
 		this.connections = [];
 	}
 	
-	function addConnection(node){
+	addConnection(node){
 		this.connection[node.from].push(node);
 		this.count++;
 	}
 
-	function print(){
+	print(){
 		var data = "Graph";
 		for (var i=0;i<this.connection.length;i++){
 			data = data + "  " + this.connection[].from;
