@@ -1,3 +1,9 @@
+ <html>
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
+   <script type="text/javascript" src="graph.js"></script>
+<script type="text/javascript" src="findPath.js"></script>
+
 # Test
 Developer Test
 
@@ -16,6 +22,7 @@ Developer Test
      // read CSV file content and save it to Graph
 -    
 +    var graph = readCSV(); 
+graph.print();
    
    // Get entered data
    var x = document.forms["myForm"]["from"].value;
@@ -29,7 +36,6 @@ Developer Test
    } 
 </script>
 
- <html>
  <body ng-app=""> 
  
  
@@ -40,7 +46,7 @@ Developer Test
   <tr>
    
    <td >CSV File:</td>
-   <td ><input type="file" id="csv" onchange="" ng-model="csv" required/>
+   <td ><input type="file" name="csv" id="csv" onchange="" ng-model="csv" required/>
    <div id="csvError" ng-show="myForm.csv.$invalid">required</div>
    </td>
    
