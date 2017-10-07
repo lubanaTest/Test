@@ -19,7 +19,7 @@
      var csv = document.forms["myForm"]["csv"].value;
      // read CSV file content and save it to Graph
 -    
-+    var graph = readCSV(); 
++   // var graph = readCSV(); 
  //graph.print();
    
    // Get entered data
