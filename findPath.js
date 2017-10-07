@@ -16,7 +16,7 @@ function findPath(graph,X,Y,T)
 	{
 		var connections = graph.connections[X];
 		for (var i=0;i<connections.length;i++){
-			var next = connections[X][i].to;
+			var next = connections[i].to;
 			if (next == Y){
 
 				alert(X+"-->");
