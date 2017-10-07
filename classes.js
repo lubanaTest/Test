@@ -6,11 +6,8 @@
 // ----------------------------------
 class Node
 {
-	var from = "";
-	var to = "";
-	var latency = 0;
-
-	function Node(x,y,t){
+	
+	constructor(x,y,t){
 		this.from = x;
 		this.to = y;
 		this.latency = t;
@@ -21,10 +18,8 @@ class Node
 // ----------------------------------
 class Graph
 {
-	var connections = [];
-	var count = 0;
-
-	function Graph(){
+	
+	constructor(){
 		this.count = 0;
 		this.connections = [];
 	}
