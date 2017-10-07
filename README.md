@@ -9,13 +9,7 @@
   
   function validateForm() {
   
-      submitForm() ;
-  }
-  
-  // ---------------------
-  
-  
-  function submitForm() {
+     
      var csv = document.forms["myForm"]["csv"].value;
      // read CSV file content and save it to Graph
 -    
@@ -48,7 +42,7 @@ Developer Test
    
    <td >CSV File:</td>
    <td ><input type="file" name="csv" id="csv" onchange="" ng-model="csv" required/>
-   <div id="csvError" ng-show="myForm.csv.$invalid">required</div>
+   <div id="csvError" ng-show="myForm.csv.$untouched">required</div>
    </td>
    
   </tr>
