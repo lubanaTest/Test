@@ -63,6 +63,9 @@ function readCSV()
 	reader.readAsText(fileUpload.files[0]);
 	
 	graph = reader.onload = function (e) {
+		
+		var graph = new Graph();
+		
 		var text = e.target.result;  
 		var rows = text.split("\n");
 		
