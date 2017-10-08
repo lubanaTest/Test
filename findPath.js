@@ -35,12 +35,13 @@ function Graph(){
 
 	Graph.prototype.print = function() {
 		var data = "Graph";
-		alert(this.devices.length);
+		 
 		for (var i=0;i<this.devices.length;i++){
 			
 			data = data + " Device " + this.devices[i] + "-->";
+			alert(this.connections[this.devices[i]].length);
 			for (var j=0;j<this.connections[this.devices[i]].length;j++){
-			data = data + " , " + this.connections[this.devices[i]][j].to;
+			data = data  + this.connections[this.devices[i]][j].to+ " , ";
 			}
 			data = data +"\n";
 		}
