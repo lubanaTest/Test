@@ -15,6 +15,7 @@
   
   var graph = new Graph();
   graph = readCSV(); 
+  alert(graph);
   //graph.print();
   
   //findPath(graph,x,y,t);
