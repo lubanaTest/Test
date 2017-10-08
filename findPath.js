@@ -138,7 +138,7 @@ function findPath(graph,X,Y,T)
 			if (next == Y){
 				
 				path = path+" --> "+Y;
-				return path = ;
+				return path ;
 			}
 			else
 			{
