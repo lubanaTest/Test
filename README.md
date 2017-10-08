@@ -14,6 +14,7 @@
   var t = document.forms["myForm"]["time"].value;
   
   var graph = new Graph();
+  alert("we are here");
   graph = readCSV(); 
   alert(graph);
   //graph.print();
@@ -43,11 +44,11 @@ Developer Test
   </tr>
   <tr>
    <td >Device from: </td>
-   <td ><input type="text" name="from" ng-model="from" required>
+   <td ><input type="text" name="from" ng-model="from" value="A" required>
     <div id="fromError" ng-show="myForm.from.$invalid">required</div></td>
   </tr>
-   <tr><td >Device to: </td><td ><input type="text" name="to"></td></tr>
-   <tr><td >Time: </td><td ><input type="text" name="time"></td></tr>
+   <tr><td >Device to: </td><td ><input type="text" name="to" value="B"></td></tr>
+   <tr><td >Time: </td><td ><input type="text" name="time" value="10"></td></tr>
   
   <tr><td  colspan="2"><input type="button" onclick="validateForm()" value="ok" /></td></tr>
   
