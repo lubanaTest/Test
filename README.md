@@ -14,10 +14,10 @@
   var t = document.forms["myForm"]["time"].value;
   
   var graph = new Graph();
-  alert("we are here");
+   
   graph = readCSV(); 
-  alert(graph);
-  //graph.print();
+  if(graph)
+     graph.print();
   
   //findPath(graph,x,y,t);
   
