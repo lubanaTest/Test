@@ -98,8 +98,8 @@ function readCSV()
 			
 			
 		}
-		graph.print();
-		return graph;
+		//graph.print();
+		 
 	}
 	
 	reader.onerror = function (e){
