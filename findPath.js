@@ -132,7 +132,7 @@ function findPath(graph,X,Y,T)
 		var connections = graph.connections[X];	
 		 
 		if (connections){
-			 alert(X);
+			 
 		for (var i=0;i<connections.length;i++){
 			var next = connections[i].to;
 			if (next == Y){
@@ -143,7 +143,7 @@ function findPath(graph,X,Y,T)
 			else
 			{
 				// call back
-				return path + " \n " + findPath(graph,next,Y,T);
+				path = path + " \n " + findPath(graph,next,Y,T);
 				
 			}
 		}
