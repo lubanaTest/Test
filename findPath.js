@@ -62,7 +62,7 @@ function readCSV()
 	var reader = new FileReader();
 	reader.readAsText(fileUpload.files[0]);
 	
-	graph = reader.onload = function (e) {
+	reader.onload = function (e) {
 		
 		var graph = new Graph();
 		
@@ -95,6 +95,7 @@ function readCSV()
 			
 			
 		}
+		graph.print();
 		return graph;
 	}
 	
