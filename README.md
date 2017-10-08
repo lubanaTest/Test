@@ -16,12 +16,9 @@
   
    
   var graph = readCSV(function() {
-      graph.print();//console.log(graph); // does not print 'undefined' 
+      graph.print();
+      findPath(graph,x,y,t);
     }); 
-   
- 
- 
-  findPath(graph,x,y,t);
   
    } 
 </script>
