@@ -43,7 +43,7 @@ function Graph(){
 	};*/
 
 Graph.prototype.print = function() {
-	alert(this.devices.length);
+	
   alert(this.devices.map(function(x) {
     return (x + ' -> ' + this.connections[x].from.join(', ')).trim();
   }, this).join(' | '));
