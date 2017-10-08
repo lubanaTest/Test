@@ -22,15 +22,15 @@ function Graph(){
 	}
 	
 	Graph.prototype.addConnection = function(node) {
-		this.connection[node.from].push(node);
+		this.connections[node.from].push(node);
 		this.count++;
 	};
 
 	Graph.prototype.print = function() {
 		var data = "Graph";
-		alert(this.connection.length);
-		for (var i=0;i<this.connection.length;i++){
-			//data = data + "  " + this.connection[i].from;
+		alert(this.connections.length);
+		for (var i=0;i<this.connections.length;i++){
+			data = data + "  " + this.connections[i].from;
 		}
 		alert(data);
 	};
