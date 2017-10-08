@@ -24,7 +24,7 @@ function Graph(){
 	
 	
 	Graph.prototype.addDevice = function(x) {
-		 
+		x=x.trim(); 
 		this.devices.push(x);
 		if (!this.connections[x])
 		this.connections[x] = [];
