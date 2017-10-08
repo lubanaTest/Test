@@ -144,6 +144,7 @@ function findPath(graph,X,Y,T)
 			{
 				// call back
 				path = path + " \n " + findPath(graph,next,Y,T);
+				return path;
 				
 			}
 		}
