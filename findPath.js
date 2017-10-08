@@ -4,7 +4,7 @@
 // ----------------------------------
 // class Node
 // ----------------------------------
-class Node
+class Node 
 {
 	
 	constructor(x,y,t){
@@ -43,7 +43,7 @@ function Graph(){
 	};*/
 
 Graph.prototype.print = function() {
-  console.log(this.devices.map(function(x) {
+  alert(this.devices.map(function(x) {
     return (x + ' -> ' + this.connections[x].join(', ')).trim();
   }, this).join(' | '));
 };
