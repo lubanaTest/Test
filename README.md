@@ -16,8 +16,13 @@
   var graph = new Graph();
    
   graph = readCSV(); 
-  if(graph)
+  if(graph){
      graph.print();
+  }
+  else
+  {
+  alert("no graph");
+  }
   
   //findPath(graph,x,y,t);
   
