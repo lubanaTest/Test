@@ -33,14 +33,21 @@ function Graph(){
 		this.count++;
 	};
 
-	Graph.prototype.print = function() {
+	/*Graph.prototype.print = function() {
 		var data = "Graph";
 		alert(this.count);
 		for (var i=0;i<this.count;i++){
 			data = data + "  " + this.connections[i].from;
 		}
 		alert(data);
-	};
+	};*/
+
+Graph.prototype.print = function() {
+  console.log(this.devices.map(function(x) {
+    return (x + ' -> ' + this.connections[x].join(', ')).trim();
+  }, this).join(' | '));
+};
+
 	
 
 // ----------------------------------
