@@ -19,14 +19,8 @@
       graph.print();//console.log(graph); // does not print 'undefined' 
     }); 
    
-  if(graph){
-     graph.print();
-  }
-  else
-  {
-  alert("no graph");
-  }
-  
+ 
+ 
   //findPath(graph,x,y,t);
   
    } 
