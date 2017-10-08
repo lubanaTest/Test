@@ -29,7 +29,7 @@ function Graph(){
 	};
 
 	Graph.prototype.addConnection = function(node) {
-		this.connections[nide.from].push(node);
+		this.connections[node.from].push(node);
 		this.count++;
 	};
 
