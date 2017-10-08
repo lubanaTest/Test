@@ -76,7 +76,7 @@ function readCSV()
 			if (x!=""){
 				var node = new Node(x,y,t);
 				graph.addConnection(node);
-				 alert("innn");
+				
 			}
 			
 			
