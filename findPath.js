@@ -39,7 +39,9 @@ function Graph(){
 		for (var i=0;i<this.devices.length;i++){
 			
 			data = data + " d " + this.devices[i];
-			data = data + "  " + this.connections[this.devices[i]].from;
+			for (var j=0;j<this.connections[this.devices[i]].length;j++){
+			data = data + " --> " + this.connections[this.devices[i]][j].from;
+			}
 		}
 		alert(data);
 	};
