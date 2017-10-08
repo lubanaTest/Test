@@ -21,7 +21,7 @@
    
  
  
-  //findPath(graph,x,y,t);
+  findPath(graph,x,y,t);
   
    } 
 </script>
