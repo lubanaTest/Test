@@ -118,7 +118,7 @@ function readCSV(callback)
 
 function findPath(graph,X,Y,T)
 {
-	 
+	 graph.print();
 
 	if (X==Y)
 	{
