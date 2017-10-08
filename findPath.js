@@ -93,7 +93,7 @@ function readCSV(callback)
 			
 			
 		}
-		callback(graph);//.print();
+		callback(graph); 
 		 
 	};
 	
@@ -127,6 +127,7 @@ function findPath(graph,X,Y,T)
 	else
 	{
 		var connections = graph.connections[X];
+		if (connections){
 		for (var i=0;i<connections.length;i++){
 			var next = connections[i].to;
 			if (next == Y){
@@ -139,6 +140,7 @@ function findPath(graph,X,Y,T)
 				findPath(graph,next,Y,T);
 				
 			}
+		}
 		}
 
 	}
