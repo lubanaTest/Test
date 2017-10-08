@@ -137,7 +137,7 @@ function findPath(graph,X,Y,T)
 			var next = connections[i].to;
 			if (next == Y){
 				
-				path = path+" --> "+Y;
+				path = path+X+" --> "+Y;
 				return path ;
 			}
 			else
