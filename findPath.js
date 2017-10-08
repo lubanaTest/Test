@@ -54,7 +54,7 @@ function Graph(){
 
 // ----------------------------------
 
-function readCSV()
+function readCSV(callback)
 {
 	
 	var graph = new Graph();
@@ -63,9 +63,7 @@ function readCSV()
 	var reader = new FileReader();
 		
 	reader.onload = function (e) {
-		
-		//var graph = new Graph();
-		
+						
 		var text = e.target.result;  
 		var rows = text.split("\n");
 		
@@ -95,7 +93,7 @@ function readCSV()
 			
 			
 		}
-		//graph.print();
+		callback(graph);//.print();
 		 
 	};
 	
@@ -104,7 +102,7 @@ function readCSV()
 			alert("Canno't read file !");
 		}
 		
-	}
+	};
 	
 	reader.readAsText(fileUpload.files[0]);
 	
