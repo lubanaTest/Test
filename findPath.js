@@ -61,10 +61,7 @@ function readCSV()
 	
 	var fileUpload = document.getElementById("csv");
 	var reader = new FileReader();
-	reader.readAsText(fileUpload.files[0]);
-	
-	
-	
+		
 	reader.onload = function (e) {
 		
 		//var graph = new Graph();
@@ -100,7 +97,7 @@ function readCSV()
 		}
 		//graph.print();
 		 
-	}
+	};
 	
 	reader.onerror = function (e){
 		if(e.target.error.name == "NotReadableError") {
@@ -108,6 +105,8 @@ function readCSV()
 		}
 		
 	}
+	
+	reader.readAsText(fileUpload.files[0]);
 	
 	return graph;
 }
