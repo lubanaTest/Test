@@ -94,7 +94,7 @@ function readCSV()
 		
 	}
 	
-	
+	return graph;
 }
 
 
