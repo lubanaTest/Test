@@ -16,7 +16,7 @@
   
    
   var graph = readCSV(function() {
-      console.log(graph); // does not print 'undefined' 
+      graph.print();//console.log(graph); // does not print 'undefined' 
     }); 
    
   if(graph){
