@@ -37,8 +37,9 @@ function Graph(){
 		var data = "Graph";
 		alert(this.devices.length);
 		for (var i=0;i<this.devices.length;i++){
-			//data = data + "  " + this.connections[devices[i]].from;
-			data = data + "  " + devices[i];
+			
+			data = data + " d " + this.devices[i];
+			data = data + "  " + this.connections[this.devices[i]].from;
 		}
 		alert(data);
 	};
