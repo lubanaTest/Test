@@ -128,6 +128,7 @@ function findPath(graph,X,Y,T)
 	else
 	{
 		var connections = graph.connections[X];
+		graph.print();
 		alert("here");
 		if (connections){
 			alert("*");
