@@ -22,7 +22,7 @@ function Graph(){
 	}
 	
 	Graph.prototype.addConnection = function(node) {
-		this.connections[node.from].push(node);
+		this.connections[this.count].push(node);
 		this.count++;
 	};
 
