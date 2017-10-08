@@ -41,7 +41,7 @@ function Graph(){
 		for (var i=0;i<this.devices.length;i++){
 			
 			data = data + " Device " + this.devices[i] + "-->";
-			alert(this.connections[this.devices[i]].length);
+			
 			for (var j=0;j<this.connections[this.devices[i]].length;j++){
 			data = data  + this.connections[this.devices[i]][j].to+ " , ";
 			}
@@ -50,14 +50,7 @@ function Graph(){
 		alert(data);
 	};
 
-/*Graph.prototype.print = function() {
-	
-  alert(this.devices.map(function(x) {
-    return (x + ' -> ' + this.connections[x].from.join(', ')).trim();
-  }, this).join(' | '));
-};*/
 
-	
 
 // ----------------------------------
 
