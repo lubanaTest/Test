@@ -81,9 +81,10 @@ function readCSV(callback)
 			var t = devices[2];
 			if(x) x= x.trim();
 			if(y) y= y.trim();
-			graph.addDevice(x);
+			
 			
 			if (x!="") {
+				graph.addDevice(x);
 				var node = new Node(x,y,t);
 				graph.addConnection(node);
 				
@@ -142,7 +143,7 @@ function findPath(graph,X,Y,T)
 			else
 			{
 				// call back
-				path = path + " \n " + findPath(graph,next,Y,T);
+				return path + " \n " + findPath(graph,next,Y,T);
 				
 			}
 		}
