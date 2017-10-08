@@ -76,8 +76,8 @@ function readCSV(callback)
 			
 			
 			var devices = rows[i].split(",");
-			var x = devices[0];
-			var y = devices[1];
+			var x = devices[0].trim();
+			var y = devices[1].trim();
 			var t = devices[2];
 			
 			graph.addDevice(x);
