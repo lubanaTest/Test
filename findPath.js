@@ -76,13 +76,14 @@ function readCSV(callback)
 			
 			
 			var devices = rows[i].split(",");
-			var x = devices[0].trim();
-			var y = devices[1].trim();
+			var x = devices[0];
+			var y = devices[1];
 			var t = devices[2];
-			
+			if(x) x= x.trim();
+			if(y) y= y.trim();
 			graph.addDevice(x);
 			
-			if (x!=""){
+			if (x!="") {
 				var node = new Node(x,y,t);
 				graph.addConnection(node);
 				
