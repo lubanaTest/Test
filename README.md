@@ -14,7 +14,7 @@
   var t = document.forms["myForm"]["time"].value;
   
   var graph = new Graph();
-  //graph = readCSV(); 
+  graph = readCSV(); 
   //graph.print();
   
   //findPath(graph,x,y,t);
