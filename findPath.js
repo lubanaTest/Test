@@ -118,31 +118,32 @@ function readCSV(callback)
 // ------------------------------
 
 function findPath(graph,X,Y,T)
-{	
+{
+	var path = "";
 
 	if (X==Y)
-	{
-		alert(X);
-		return;
+	{		 
+		path = X;
+		return path;
 	}
 	else
 	{
 		var connections = graph.connections[X];
 		graph.print();
-		alert("here");
+		 
 		if (connections){
-			alert("*");
+			 
 		for (var i=0;i<connections.length;i++){
 			var next = connections[i].to;
 			if (next == Y){
-
-				alert(X+"-->");
-				return;
+				
+				path = path+" --> "+Y;
+				return path = ;
 			}
 			else
 			{
 				// call back
-				findPath(graph,next,Y,T);
+				path = path + " \n " + findPath(graph,next,Y,T);
 				
 			}
 		}
