@@ -35,9 +35,9 @@ function Graph(){
 
 	Graph.prototype.print = function() {
 		var data = "Graph";
-		alert(this.count);
-		for (var i=0;i<this.count;i++){
-			data = data + "  " + this.connections[i].from;
+		alert(this.devices.length);
+		for (var i=0;i<this.devices.length;i++){
+			data = data + "  " + this.connections[devices[i]].from;
 		}
 		alert(data);
 	};
