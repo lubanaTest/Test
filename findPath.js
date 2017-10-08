@@ -18,11 +18,18 @@ class Node
 // ----------------------------------
 function Graph(){
 		this.count = 0;
+		this.devices = [];
 		this.connections = [];
 	}
 	
+	
+	Graph.prototype.addDevice = function(x) {
+		this.devices.push(x);
+		this.connections[x] = [];
+	};
+
 	Graph.prototype.addConnection = function(node) {
-		this.connections[this.count].push(node);
+		this.connections[nide.from].push(node);
 		this.count++;
 	};
 
@@ -63,6 +70,8 @@ function readCSV()
 			var x = devices[0];
 			var y = devices[1];
 			var t = devices[2];
+			
+			graph.addDevice(x);
 			
 			if (x!=""){
 				var node = new Node(x,y,t);
