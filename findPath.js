@@ -38,10 +38,11 @@ function Graph(){
 		alert(this.devices.length);
 		for (var i=0;i<this.devices.length;i++){
 			
-			data = data + " d " + this.devices[i];
+			data = data + " Device " + this.devices[i] + "-->";
 			for (var j=0;j<this.connections[this.devices[i]].length;j++){
-			data = data + " --> " + this.connections[this.devices[i]][j].from;
+			data = data + " , " + this.connections[this.devices[i]][j].to;
 			}
+			data = data +"\n";
 		}
 		alert(data);
 	};
