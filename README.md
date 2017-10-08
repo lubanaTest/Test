@@ -16,6 +16,7 @@
   var graph = new Graph();
    
   graph = readCSV(); 
+  alert(graph);
   if(graph){
      graph.print();
   }
