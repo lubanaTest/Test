@@ -13,10 +13,10 @@
   var y = document.forms["myForm"]["to"].value;
   var t = document.forms["myForm"]["time"].value;
   
-  var graph = new Graph();
+  
    
-  graph = readCSV(); 
-  alert(graph);
+  var graph = readCSV(); 
+   
   if(graph){
      graph.print();
   }
