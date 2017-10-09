@@ -80,12 +80,8 @@ function readCSV(callback)
 			
 			
 			if (x!="") {
-				graph.addDevice(x);
-				graph.addDevice(y);
+				graph.addDevice(x);				 
 				var node = new Node(x,y,t);
-				graph.addConnection(node);
-				
-				node = new Node(y,x,t);
 				graph.addConnection(node);
 				
 			}
@@ -138,14 +134,14 @@ function findPath(graph,X,Y,T)
 			 
 			if (next == Y){
 				
-				path = path+X+" --> "+Y;
+				path = path+X+" --> "+Y+" *"+T+"*";
 				return path ;
 			}
 			else
 			{
 				// call back
-				path = path+X+" --> "+next+ " \n";
-				path = path  + findPath(graph,next,Y,T);
+				path = path+X+" --> "+next+ +" *"+T+"*"+" \n";
+				path = path  + findPath(graph,next,Y,T+connections[i].latency);
 				return path;
 				
 			}
