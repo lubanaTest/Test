@@ -135,14 +135,15 @@ function findPath(graph,X,Y,T)
 			 
 			if (next == Y){
 				
-				path = path+X+" --> "+Y+" *"+connections[i].latency+"*";
+				path = path+X+" --> "+Y+" * "+connections[i].latency+" *";
 				return path ;
 			}
 			else
 			{
 				// call back
-				path = path+X+" --> "+next+ " *"+T+"*"+" \n";
-				path = path  + findPath(graph,next,Y,T+connections[i].latency);
+				T = T+connections[i].latency;
+				path = path+X+" --> "+next+ " * "+T+" *"+" \n";
+				path = path  + findPath(graph,next,Y,T);
 				return path;
 				
 			}
