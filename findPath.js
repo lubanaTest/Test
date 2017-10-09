@@ -135,7 +135,7 @@ function findPath(graph,X,Y,T)
 			 
 			if (next == Y){
 				
-				path = path+X+" --> "+Y+" * "+connections[i].latency+" *";
+				path = path+X+" --> "+Y+" * "+T+" *";
 				return path ;
 			}
 			else
