@@ -46,9 +46,9 @@
    <td ><input type="text" name="from" ng-model="from" value="A" required>
     <div id="fromError" ng-show="myForm.from.$invalid">required</div></td>
   </tr>
-   <tr><td >Device to: </td><td ><input type="text" name="to">
+   <tr><td >Device to: </td><td ><input type="text" name="to" required>
  <div id="toError" ng-show="myForm.to.$invalid">required</div></td></tr>
-   <tr><td >Time: </td><td ><input type="text" name="time">
+   <tr><td >Time: </td><td ><input type="text" name="time" required>
  <div id="timeError" ng-show="myForm.time.$invalid">required</div></td></tr>
   
   <tr><td  colspan="2"><input type="button" onclick="validateForm()" value="ok" /></td></tr>
