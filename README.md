@@ -18,6 +18,8 @@
   var graph = readCSV(function() {
       graph.print();
       var path = findPath(graph,x,y,t);
+      if (path.include.("no path"))
+          path = findPath(graph,y,x,t);
       alert(path);
     }); 
   
