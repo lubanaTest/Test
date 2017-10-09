@@ -116,7 +116,7 @@ function readCSV(callback)
 
 function findPath(graph,X,Y,T)
 {
-	alert(T);
+	 
 	var path = "";
 
 	if (X==Y)
@@ -135,13 +135,13 @@ function findPath(graph,X,Y,T)
 			 
 			if (next == Y){
 				
-				path = path+X+" --> "+Y+" *"+T+"*";
+				path = path+X+" --> "+Y+" *"+T.toString()+"*";
 				return path ;
 			}
 			else
 			{
 				// call back
-				path = path+X+" --> "+next+ +" *"+T+"*"+" \n";
+				path = path+X+" --> "+next+ +" *"+T.toString()+"*"+" \n";
 				path = path  + findPath(graph,next,Y,T+connections[i].latency);
 				return path;
 				
