@@ -17,9 +17,9 @@
    
   var graph = readCSV(function() {
       graph.print();
-      var path = findPath(graph,x,y,0);
+      var path = findPath(graph,x,y,0,t);
       //if (path.includes("no path"))
-         // path = findPath(graph,y,x,0);
+         // path = findPath(graph,y,x,0,t);
       alert(path);
     }); 
   
