@@ -14,24 +14,21 @@
   var t = parseInt(document.forms["myForm"]["time"].value);
   
   
-   
+  if (csv)
+  {
   var graph = readCSV(function() {
       graph.print();
-      var path = findPath(graph,x,y,0,t);
-      //if (path.includes("no path"))
-         // path = findPath(graph,y,x,0,t);
+      var path = findPath(graph,x,y,0,t);     
       alert(path);
     }); 
+    }
   
    } 
 </script>
 
  <body ng-app=""> 
  
- # Test
-Developer Test
-
-
+ 
  <h3>Enter the following information please:</h3>
  
  <form name="myForm">
@@ -49,8 +46,10 @@ Developer Test
    <td ><input type="text" name="from" ng-model="from" value="A" required>
     <div id="fromError" ng-show="myForm.from.$invalid">required</div></td>
   </tr>
-   <tr><td >Device to: </td><td ><input type="text" name="to" value="B"></td></tr>
-   <tr><td >Time: </td><td ><input type="text" name="time" value="10"></td></tr>
+   <tr><td >Device to: </td><td ><input type="text" name="to">
+ <div id="toError" ng-show="myForm.to.$invalid">required</div></td></tr>
+   <tr><td >Time: </td><td ><input type="text" name="time">
+ <div id="timeError" ng-show="myForm.time.$invalid">required</div></td></tr>
   
   <tr><td  colspan="2"><input type="button" onclick="validateForm()" value="ok" /></td></tr>
   
