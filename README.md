@@ -11,7 +11,7 @@
   
   var x = document.forms["myForm"]["from"].value;
   var y = document.forms["myForm"]["to"].value;
-  var t = document.forms["myForm"]["time"].value;
+  var t = parseInt(document.forms["myForm"]["time"].value);
   
   
    
