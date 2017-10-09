@@ -106,6 +106,24 @@ function readCSV(callback)
 	
 	return graph;
 }
+// ------------------------------
+
+function isConnted(graph,X,Y)
+{
+	var connections = graph.connections[X];	
+		 
+	if (connections){
+			 
+		for (var i=0;i<connections.length;i++){
+			var next = connections[i].to;
+			 
+			if (next == Y){
+				return true;
+			}
+		}
+	}
+	return false;
+}
 
 
 // ------------------------------
@@ -118,6 +136,18 @@ function findPath(graph,X,Y,T,MAX)
 {
 	 
 	var path = "";
+	
+	if (isConnted(graph,X,Y))
+	{
+		path = path+X+" --> "+Y+" * "+T+" *";
+		return path;
+	}
+	
+	if (isConnted(graph,Y,X))
+	{
+		path = path+Y+" --> "+X+" * "+T+" *";
+		return path;
+	}
 
 	if (X==Y)
 	{		 
