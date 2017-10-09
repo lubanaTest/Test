@@ -1,6 +1,3 @@
-
-
-
 // ----------------------------------
 // class Node
 // ----------------------------------
@@ -65,8 +62,7 @@ function readCSV(callback)
 	reader.onload = function (e) {
 						
 		var text = e.target.result;  
-		var rows = text.split("\n");
-		
+		var rows = text.split("\n");		
 
 		for (var i = 0; i < rows.length; i++) {
 			
@@ -86,6 +82,9 @@ function readCSV(callback)
 			if (x!="") {
 				graph.addDevice(x);
 				var node = new Node(x,y,t);
+				graph.addConnection(node);
+				
+				node = new Node(y,x,t);
 				graph.addConnection(node);
 				
 			}
