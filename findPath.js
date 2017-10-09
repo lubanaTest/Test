@@ -138,13 +138,12 @@ function findPath(graph,X,Y,T,MAX)
 				// Check MAX
 				if (T>MAX)
 				{
-					T = T-connections[i].latency;
-					i++;
+					T = T-connections[i].latency;					
 				}
 				else
 				{
-				path = path+X+" --> "+Y+" * "+T+" *";
-				return path ;
+					path = path+X+" --> "+Y+" * "+T+" *";
+					return path ;
 				}
 			}
 			else
@@ -153,18 +152,13 @@ function findPath(graph,X,Y,T,MAX)
 				T = T+connections[i].latency;
 				if (T>MAX)
 				{
-					T = T-connections[i].latency;
-					if (connections[i++])
-					{
-					next = connections[i++].to;
-					path = path  + findPath(graph,next,Y,T);
-					}
+					T = T-connections[i].latency;					
 				}
 				else
 				{
-				path = path+X+" --> "+next+ " * "+T+" *"+" \n";
-				path = path  + findPath(graph,next,Y,T);
-				return path;
+					path = path+X+" --> "+next+ " * "+T+" *"+" \n";
+					path = path  + findPath(graph,next,Y,T);
+					return path;
 				}
 				
 			}
