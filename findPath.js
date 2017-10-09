@@ -151,9 +151,17 @@ function findPath(graph,X,Y,T,MAX)
 			{
 				// call back
 				T = T+connections[i].latency;
+				if (T>MAX)
+				{
+					T = T-connections[i].latency;
+					i++;
+				}
+				else
+				{
 				path = path+X+" --> "+next+ " * "+T+" *"+" \n";
 				path = path  + findPath(graph,next,Y,T);
 				return path;
+				}
 				
 			}
 		}
