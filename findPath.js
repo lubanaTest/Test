@@ -108,23 +108,6 @@ function readCSV(callback)
 }
 // ------------------------------
 
-function isConnted(graph,X,Y)
-{
-	var connections = graph.connections[X];	
-		 
-	if (connections){
-			 
-		for (var i=0;i<connections.length;i++){
-			var next = connections[i].to;
-			 
-			if (next == Y){
-				return true;
-			}
-		}
-	}
-	return false;
-}
-
 
 // ------------------------------
 // Find path function:
@@ -136,14 +119,6 @@ function findPath(graph,X,Y,T,MAX)
 {
 	 
 	var path = "";
-	
-	if (isConnted(graph,X,Y)||(isConnted(graph,Y,X))
-	{
-		path = path+X+" --> "+Y+" * "+T+" *";
-		return path;
-	}
-	
-	 
 
 	if (X==Y)
 	{		 
