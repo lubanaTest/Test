@@ -7,7 +7,7 @@ class Node
 	constructor(x,y,t){
 		this.from = x;
 		this.to = y;
-		this.latency = t;
+		this.latency = parseInt(t);
 	}
 }
 // ----------------------------------
