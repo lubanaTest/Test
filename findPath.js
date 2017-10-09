@@ -81,6 +81,7 @@ function readCSV(callback)
 			
 			if (x!="") {
 				graph.addDevice(x);
+				graph.addDevice(y);
 				var node = new Node(x,y,t);
 				graph.addConnection(node);
 				
