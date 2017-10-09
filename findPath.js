@@ -137,17 +137,13 @@ function findPath(graph,X,Y,T,MAX)
 	 
 	var path = "";
 	
-	if (isConnted(graph,X,Y))
+	if (isConnted(graph,X,Y)||(isConnted(graph,Y,X))
 	{
 		path = path+X+" --> "+Y+" * "+T+" *";
 		return path;
 	}
 	
-	if (isConnted(graph,Y,X))
-	{
-		path = path+Y+" --> "+X+" * "+T+" *";
-		return path;
-	}
+	 
 
 	if (X==Y)
 	{		 
