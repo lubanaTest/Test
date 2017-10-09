@@ -169,10 +169,11 @@ function findPath(graph,X,Y,T,MAX)
 		else
 		{
 			// call back
-			path = "no path";
+			path = "Path not found";
 			return path;
 		}
 
 	}
+	path = "Path not found";
 	return path;
 }
