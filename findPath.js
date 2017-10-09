@@ -114,7 +114,7 @@ function readCSV(callback)
 // path between two nodes
 // ------------------------------
 
-function findPath(graph,X,Y,T)
+function findPath(graph,X,Y,T,MAX)
 {
 	 
 	var path = "";
@@ -135,8 +135,17 @@ function findPath(graph,X,Y,T)
 			 
 			if (next == Y){
 				T = T+connections[i].latency;
+				// Check MAX
+				if (T>MAX)
+				{
+					T = T-connections[i].latency;
+					i++;
+				}
+				else
+				{
 				path = path+X+" --> "+Y+" * "+T+" *";
 				return path ;
+				}
 			}
 			else
 			{
