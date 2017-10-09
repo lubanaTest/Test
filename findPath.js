@@ -76,7 +76,7 @@ function readCSV(callback)
 			var y = devices[1];
 			var t = devices[2];
 			if(x) x= x.trim();
-			if(y) y= y.trim();
+			if(y) y= y.trim();		
 			
 			
 			if (x!="") {
@@ -116,6 +116,7 @@ function readCSV(callback)
 
 function findPath(graph,X,Y,T)
 {
+	alert(T);
 	var path = "";
 
 	if (X==Y)
